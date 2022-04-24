@@ -33,8 +33,8 @@ public class Main {
         System.out.println(author2.getName() + " " + author2.getFamily());
         Book book2 = new Book("Jack London", 1909);
 
-        System.out.println(book.getNameBook() + " " + book.setYearPublication() + " " + author.getName() + " " + author.getFamily());
-        System.out.println(book2.getNameBook() + " " + book2.getYearPublication() + " " + author2.getName() + " " + author2.getFamily());
+        System.out.println(book.getNameBook() + " " + author.getName() + " " + author.getFamily());
+        System.out.println(book2.getNameBook() + " " + author2.getName() + " " + author2.getFamily());
     }
 }
 

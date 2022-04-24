@@ -53,14 +53,22 @@ public class Book {
         return yearPublication;
     }
 
-    public String setYearPublication() {
+    public void setYearPublication() {
         if (yearPublication < 1874 || yearPublication > 2030) {
             System.out.println("Invalid publishing year parameter: " + yearPublication);
-        }
-        this.yearPublication = yearPublication;
-        return null;
+            return;
+        } else
+            this.yearPublication = yearPublication;
+    }
+    public void setYearPublication2() {
+        if (yearPublication < 1909 || yearPublication > 2030) {
+            System.out.println("Invalid publishing year parameter: " + yearPublication2);
+            return;
+        } else
+            this.yearPublication2 = yearPublication2;
     }
 }
+
 
 //  public String getNameBook() {
   //      return this.nameBook;
