@@ -1,25 +1,5 @@
 package MXN;
 
-// public class Person {
- //   private String name;
- //   private int age;
-
- //   public Person(String name, int age) {
-  //      this.name = name;
-  //      this.age = age;
- //   }
-  //  public String getName(){
- //       return this.name;
-  //  }
- //   public int getAge() {
-  //      return this.age;
-   // }
- //   public void setAge(int age) {
-  //      this.age = age;
- //   }
- //   }
-
-
 public class Book {
     String nameBook;
     private int yearPublication;
@@ -27,9 +7,12 @@ public class Book {
     String nameBook2;
     private String yearPublication2;
 
-    public Book(String nameBook, int yearPublication) {
+    private Author author;
+
+    public Book(String nameBook, int yearPublication, Author author) {
         this.nameBook = nameBook;
         this.yearPublication = yearPublication;
+        this.author = author;
     }
 
     public String getNameBook() {
@@ -45,12 +28,11 @@ public class Book {
         return this.nameBook2;
     }
 
-    public String getYearPublication2() {
-        return yearPublication2;
-    }
-
     public int getYearPublication() {
         return yearPublication;
+    }
+    public String getYearPublication2() {
+        return yearPublication2;
     }
 
     public void setYearPublication() {
@@ -72,3 +54,23 @@ public class Book {
 
 //  public String getNameBook() {
   //      return this.nameBook;
+
+// public class Person {
+//   private String name;
+//   private int age;
+
+//   public Person(String name, int age) {
+//      this.name = name;
+//      this.age = age;
+//   }
+//  public String getName(){
+//       return this.name;
+//  }
+//   public int getAge() {
+//      return this.age;
+// }
+//   public void setAge(int age) {
+//      this.age = age;
+//   }
+//   }
+

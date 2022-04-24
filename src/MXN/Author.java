@@ -11,6 +11,7 @@ public class Author {
     public Author(String name, String family) {
         this.name = name;
         this.family = family;
+
     }
 
     public String getName() {
@@ -28,8 +29,7 @@ public class Author {
     public String getName2() {
         return this.name2;
     }
-    public String getFamily2() {
-        return this.family2;
+    public String getFamily2() {return this.family2;
 
     }
 }

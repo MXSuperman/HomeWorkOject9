@@ -28,10 +28,10 @@ public class Main {
 
         Author author = new Author("Jules", "Verne");
         System.out.println(author.getName() + " " + author.getFamily());
-        Book book = new Book("Mysterious island", 1874);
+        Book book = new Book("Mysterious island", 1874, author);
         Author author2 = new Author("Martin", "Eden");
         System.out.println(author2.getName() + " " + author2.getFamily());
-        Book book2 = new Book("Jack London", 1909);
+        Book book2 = new Book("Jack London", 1909, author2);
 
         System.out.println(book.getNameBook() + " " + author.getName() + " " + author.getFamily());
         System.out.println(book2.getNameBook() + " " + author2.getName() + " " + author2.getFamily());
