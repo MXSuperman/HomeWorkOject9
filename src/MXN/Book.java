@@ -4,50 +4,27 @@ public class Book {
     String nameBook;
     private int yearPublication;
 
-    String nameBook2;
-    private String yearPublication2;
-
-    private Author author;
-
-    public Book(String nameBook, int yearPublication, Author author) {
+    public Book(String nameBook, String yearPublication) {
         this.nameBook = nameBook;
-        this.yearPublication = yearPublication;
-        this.author = author;
+        this.yearPublication = Integer.parseInt(yearPublication);
     }
 
     public String getNameBook() {
         return this.nameBook;
     }
 
-    public void Book2(String nameBook2, int yearPublication2) {
-        this.nameBook = nameBook2;
-        this.yearPublication = yearPublication2;
-    }
 
-    public String getNameBook2() {
-        return this.nameBook2;
+    public void setYearPublication(int yearPublication) {
+        if (yearPublication < 1874 || yearPublication > 2030) {
+            System.out.println("Invalid publishing year parameter: " + yearPublication);
+            return;
+        } else {
+            this.yearPublication = yearPublication;
+        }
     }
 
     public int getYearPublication() {
         return yearPublication;
-    }
-    public String getYearPublication2() {
-        return yearPublication2;
-    }
-
-    public void setYearPublication() {
-        if (yearPublication < 1874 || yearPublication > 2030) {
-            System.out.println("Invalid publishing year parameter: " + yearPublication);
-            return;
-        } else
-            this.yearPublication = yearPublication;
-    }
-    public void setYearPublication2() {
-        if (yearPublication < 1909 || yearPublication > 2030) {
-            System.out.println("Invalid publishing year parameter: " + yearPublication2);
-            return;
-        } else
-            this.yearPublication2 = yearPublication2;
     }
 }
 

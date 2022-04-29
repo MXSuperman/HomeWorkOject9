@@ -1,37 +1,32 @@
 package MXN;
 
-import java.sql.SQLOutput;
-
 public class Main {
 
     public static void main(String[] args) {
 
-        String nameBook = "Mysterious island";
-        int yearPublication = 1874;
+       // String nameBook = "Mysterious island";
+      //  int yearPublication = 1874;
 
-        String nameBook2 = "Jack London";
-        int yearPublication2 = 1909;
+      //  String nameBook2 = "Jack London";
+      //  int yearPublication2 = 1909;
 
         String[] names = {"Mysterious island", "Jack London"};
         int[] yearPublications = {1874, 1909};
 
-        for (int i = 0; i < names.length; i++) {
+        //    String name = "Jules";
+        //   String family = "Verne";
+        //   String name2 = "Martin";
+        //   String family2 = "Eden";
+        for (int i = 0; i < names.length; i++)
             System.out.println("Name book " + names[i] + " year publication - " + yearPublications[i]);
-
-            String name = "Jules";
-            String family = "Verne";
-
-            String name2 = "Martin";
-            String family2 = "Eden";
-        }
         // First Exercise
 
         Author author = new Author("Jules", "Verne");
         System.out.println(author.getName() + " " + author.getFamily());
-        Book book = new Book("Mysterious island", 1874, author);
+        Book book = new Book("Mysterious island", "1878");
         Author author2 = new Author("Martin", "Eden");
         System.out.println(author2.getName() + " " + author2.getFamily());
-        Book book2 = new Book("Jack London", 1909, author2);
+        Book book2 = new Book("Jack London", "1909");
 
         System.out.println(book.getNameBook() + " " + author.getName() + " " + author.getFamily());
         System.out.println(book2.getNameBook() + " " + author2.getName() + " " + author2.getFamily());
