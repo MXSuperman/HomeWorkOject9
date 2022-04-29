@@ -1,5 +1,7 @@
 package MXN;
 
+import java.util.Objects;
+
 public class Book {
     String nameBook;
     private int yearPublication;
@@ -9,10 +11,25 @@ public class Book {
         this.yearPublication = Integer.parseInt(yearPublication);
     }
 
+    public String toString() {
+        return nameBook + " " + yearPublication;
+    }
+
+
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Book book = (Book) o;
+        return yearPublication == book.yearPublication && Objects.equals(nameBook, book.nameBook);
+    }
+
+    public int hashCode() {
+        return Objects.hash(nameBook, yearPublication);
+    }
+
     public String getNameBook() {
         return this.nameBook;
     }
-
 
     public void setYearPublication(int yearPublication) {
         if (yearPublication < 1874 || yearPublication > 2030) {
@@ -25,6 +42,16 @@ public class Book {
 
     public int getYearPublication() {
         return yearPublication;
+    }
+    public static void main(String[] args) {
+        Book book = new Book("Great", "1800");
+        System.out.println(book);
+        System.out.println(book.toString());
+
+        Book book1 = new Book("Great" , "1800");
+        Book book2 = new Book("Great" ,"1800");
+
+        System.out.println(book1.equals(book2));
     }
 }
 

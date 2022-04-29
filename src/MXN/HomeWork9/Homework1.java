@@ -20,7 +20,7 @@ public class Homework1 {
     }
 
     public String toString() {
-        return nameBook + " " + family + " " + nameBook + " " + yearPublication;
+        return name + " " + family + " " + nameBook + " " + yearPublication;
 
     }
 
@@ -35,12 +35,6 @@ public class Homework1 {
         return Objects.hash(name, family, nameBook, yearPublication);
     }
 
-    public class Method {
-        String A = name;
-        String B = family;
-        String C = nameBook;
-        int D = yearPublication;
-    }
     public static void main(String[] args) {
 
         Homework1 homework1 = new Homework1("Aleksei", "Konobeevskikh", "Future", "2001");
