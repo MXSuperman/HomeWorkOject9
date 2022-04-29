@@ -3,6 +3,8 @@ package MXN.HomeWork9;
 import MXN.Author;
 import MXN.Book;
 
+import java.util.Objects;
+
 public class Homework1 {
     private String name;
     private String family;
@@ -22,22 +24,15 @@ public class Homework1 {
 
     }
 
-    public boolean equals(Homework1 homework1) {
-        if (this == homework1) {
-            return true;
-        }
-        if (homework1 == null || getClass() != homework1.getClass()) {
-            return false;
-        }
-        Homework1 h = (Homework1) homework1;
-        return name == h.name && family == h.family && nameBook == h.nameBook && yearPublication == h.yearPublication;
-
+    public boolean equals(Object total) {
+        if (this == total) return true;
+        if (total == null || getClass() != total.getClass()) return false;
+        Homework1 homework1 = (Homework1) total;
+        return yearPublication == homework1.yearPublication && Objects.equals(name, homework1.name) && Objects.equals(family, homework1.family) && Objects.equals(nameBook, homework1.nameBook);
     }
 
     public int hashCode() {
-        int hash = yearPublication;
-        hash = 10 * hash + yearPublication;
-        return hash;
+        return Objects.hash(name, family, nameBook, yearPublication);
     }
 
     public class Method {

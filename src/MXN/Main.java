@@ -1,5 +1,7 @@
 package MXN;
 
+import org.w3c.dom.ls.LSOutput;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -30,6 +32,7 @@ public class Main {
 
         System.out.println(book.getNameBook() + " " + author.getName() + " " + author.getFamily());
         System.out.println(book2.getNameBook() + " " + author2.getName() + " " + author2.getFamily());
+        System.out.println(book.equals(book));
     }
 }
 
